@@ -95,7 +95,36 @@ const totalAgeInSF = peopleReduce.reduce((accumulator, person) => {
 
 console.log(totalAgeInSF); // Output: 70
 
+/////////
+// Enum
+////////
+enum Fruit {
+    Apple, //0
+    Banana, //1
+    Orange //2
+}
+console.log(Fruit.Apple); // Output: 0
+console.log(Fruit.Banana); // Output: 1
+console.log(Fruit.Orange); // Output: 2
 
+enum FruitColor {
+    Apple  = 1, 
+    Banana = 2,
+    Orange = 3,
+}
+console.log(FruitColor[0]); // Output: undefined
+console.log(FruitColor[1]); // Output: "Apple"
+console.log(FruitColor[2]); // Output: "Banana"
+console.log(FruitColor[3]); // Output: "Orange"
 
-
+enum FruitName {
+    Apple  = "Apple", 
+    Banana = "Banana",
+    Orange = "Orange",
+}
+//Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'typeof FruitName'.
+// Property '0' does not exist on type 'typeof FruitName'.ts(7053)
+// console.log(FruitName[0]); // Error
+// console.log(FruitName[1]); // Error
+// console.log(FruitName[2]); // Error
 

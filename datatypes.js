@@ -48,6 +48,7 @@ console.log(filteredPeople);
 // Using the find() method to find the first person in the array over the age of 35
 const personOver35 = people.find(person => person.age > 35);
 console.log(personOver35);
+// Using Reduce
 const peopleReduce = [
     { name: "Alice", age: 25, city: "New York" },
     { name: "Bob", age: 30, city: "San Francisco" },
@@ -65,3 +66,58 @@ const totalAgeInSF = peopleReduce.reduce((accumulator, person) => {
     }
 }, 0);
 console.log(totalAgeInSF); // Output: 70
+/////////
+// Enum
+////////
+var Fruit;
+(function (Fruit) {
+    Fruit[Fruit["Apple"] = 0] = "Apple";
+    Fruit[Fruit["Banana"] = 1] = "Banana";
+    Fruit[Fruit["Orange"] = 2] = "Orange"; //2
+})(Fruit || (Fruit = {}));
+console.log(Fruit.Apple); // Output: 0
+console.log(Fruit.Banana); // Output: 1
+console.log(Fruit.Orange); // Output: 2
+var FruitColor;
+(function (FruitColor) {
+    FruitColor[FruitColor["Apple"] = 1] = "Apple";
+    FruitColor[FruitColor["Banana"] = 2] = "Banana";
+    FruitColor[FruitColor["Orange"] = 3] = "Orange";
+})(FruitColor || (FruitColor = {}));
+console.log(FruitColor[0]); // Output: undefined
+console.log(FruitColor[1]); // Output: "Apple"
+console.log(FruitColor[2]); // Output: "Banana"
+console.log(FruitColor[3]); // Output: "Orange"
+var FruitName;
+(function (FruitName) {
+    FruitName["Apple"] = "Apple";
+    FruitName["Banana"] = "Banana";
+    FruitName["Orange"] = "Orange";
+})(FruitName || (FruitName = {}));
+//Element implicitly has an 'any' type because expression of type '0' can't be used to index type 'typeof FruitName'.
+// Property '0' does not exist on type 'typeof FruitName'.ts(7053)
+// console.log(FruitName[0]); // Error
+// console.log(FruitName[1]); // Error
+// console.log(FruitName[2]); // Error
+//////////
+// Tuple
+//////////
+let swapnumber;
+// Type 'number[]' is not assignable to type '[number, number]'.
+// Target requires 2 element(s) but source may have fewer
+// function swapNumber(number1: number, number2: number) {
+//     return [number2, number1];
+// }
+// --> add : [number, number]
+function swapNumber(number1, number2) {
+    return [number2, number1];
+}
+swapnumber = swapNumber(10, 20);
+console.log(swapnumber);
+swapnumber = swapNumber(swapnumber[0], swapnumber[1]);
+console.log(swapnumber);
+function printPerson(person) {
+    console.log(`Name: ${person[0]}, Age: ${person[1]}`);
+}
+let personTuple = ["John", 30];
+printPerson(personTuple);

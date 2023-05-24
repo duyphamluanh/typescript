@@ -163,3 +163,32 @@ List of all the methods available on `Array.prototype` in JavaScript:
 - `values`: Returns an iterator over the values in the array.
 
 Note that some of these methods have been introduced in newer versions of JavaScript and may not be supported in older browsers. Additionally, some of these methods may have behavior that depends on the type of the elements in the array, so it's important to read the documentation carefully when using these methods.
+
+
+
+Enum in TypeScript
+An enum is a way to define a set of named constants. Enums allow you to define a collection of related values that can be accessed using a set of named keys.
+```
+    enum Fruit {
+        Apple, //0
+        Banana, //1
+        Orange //2
+    }
+    console.log(Fruit.Apple); // Output: 0
+    console.log(Fruit.Banana); // Output: 1
+    console.log(Fruit.Orange); // Output: 2
+```
+
+```
+    enum FruitColor {
+      Apple  = 1, 
+      Banana = 2,
+      Orange = 3,
+    }
+    console.log(Fruit[0]); // Output: "Apple"
+    console.log(Fruit[1]); // Output: "Banana"
+    console.log(Fruit[2]); // Output: "Orange"
+```
+
+
+
