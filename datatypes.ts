@@ -128,3 +128,17 @@ enum FruitName {
 // console.log(FruitName[1]); // Error
 // console.log(FruitName[2]); // Error
 
+
+// Any
+let department: any;
+department = 10;
+department = '11';
+console.log(typeof(department));
+
+// Error
+// function add(a, b) {
+//     return a + b;
+// }
+
+// const result = add(2, '3');
+// console.log(result);

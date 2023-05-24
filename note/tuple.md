@@ -1,12 +1,12 @@
 Tuple is a fixed-length array that contains elements of different types. Tuples allow you to express an array where the type of a fixed number of elements is known, but not necessarily the same.
 Tuples in TypeScript are useful when you want to represent a fixed number o values of different types and maintain that __specific order of types__. They can be used to provide more type safety in situations where you need to work with __fixed sets of values with known types__. However, it's important to note that using tuples can sometimes make your code __less readable__, and it's often better to use interfaces or classes to represent structured data.
 
-```
+```typescript
     let myTuple: [string, number];
     let myTuple: [string, number] = ["hello", 123];
 ```
 Tuples in function
-```
+```typescript
 function printPerson(person: [string, number]) {
   console.log(`Name: ${person[0]}, Age: ${person[1]}`);
 }

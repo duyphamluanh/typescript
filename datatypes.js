@@ -99,25 +99,13 @@ var FruitName;
 // console.log(FruitName[0]); // Error
 // console.log(FruitName[1]); // Error
 // console.log(FruitName[2]); // Error
-//////////
-// Tuple
-//////////
-let swapnumber;
-// Type 'number[]' is not assignable to type '[number, number]'.
-// Target requires 2 element(s) but source may have fewer
-// function swapNumber(number1: number, number2: number) {
-//     return [number2, number1];
-// }
-// --> add : [number, number]
-function swapNumber(number1, number2) {
-    return [number2, number1];
+// Any
+let department;
+department = 10;
+department = '11';
+console.log(typeof (department));
+function add(a, b) {
+    return a + b;
 }
-swapnumber = swapNumber(10, 20);
-console.log(swapnumber);
-swapnumber = swapNumber(swapnumber[0], swapnumber[1]);
-console.log(swapnumber);
-function printPerson(person) {
-    console.log(`Name: ${person[0]}, Age: ${person[1]}`);
-}
-let personTuple = ["John", 30];
-printPerson(personTuple);
+const result = add(2, '3');
+console.log(result);

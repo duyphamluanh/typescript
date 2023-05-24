@@ -10,7 +10,7 @@ You can use methods from Array.prototype on instances of Array in TypeScript cod
 List of all the methods available on `Array.prototype` in JavaScript:
 
 - `concat`: Returns a new array that combines the contents of the original array with one or more additional arrays or values.  
-```
+```typescript
     const array1: number[] = [1, 2, 3];
     const array2: number[] = [4, 5, 6];
     const array3: number[] = [7, 8, 9];
@@ -22,7 +22,7 @@ List of all the methods available on `Array.prototype` in JavaScript:
     // the concat method does not modify the original arrays, but instead returns a new array containing all the elements from the original arrays in the order they were concatenated.
 ```
 - `copyWithin`: Copies a sequence of elements within the array to the position starting at the specified target index.
-```
+```typescript
     const array1 = ['a', 'b', 'c', 'd', 'e'];
 
     // Copy to index 0 the element at index 3
@@ -42,7 +42,7 @@ List of all the methods available on `Array.prototype` in JavaScript:
     // iIt is possible to use the copyWithin method with arrays of objects in TypeScript
 ```
 - `entries`: Returns an iterator over the key-value pairs in the array.
-```
+```typescript
     interface Person {
         name: string;
         age: number;
@@ -69,7 +69,7 @@ List of all the methods available on `Array.prototype` in JavaScript:
     */
 ```
 - `every`: Tests whether all elements in the array pass the test implemented by the provided function.
-```
+```typescript
     const numbers: number[] = [1, 2, 3, 4, 5];
 
     // Using the every() method to test whether all elements in the array are even
@@ -86,7 +86,7 @@ List of all the methods available on `Array.prototype` in JavaScript:
 
 ```
 - `fill`: Fills all the elements in the array with a static value.  
-```
+```typescript
     const array1 = [1, 2, 3, 4];
 
     // Fill with 0 from position 2 until position 4
@@ -101,7 +101,7 @@ List of all the methods available on `Array.prototype` in JavaScript:
     // Expected output: Array [6, 6, 6, 6]
 ```
 - `filter`: Returns a new array containing all elements that pass the test implemented by the provided function.
-```
+```typescript
     const words = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
 
     const result = words.filter(word => word.length > 6);
@@ -168,7 +168,7 @@ Note that some of these methods have been introduced in newer versions of JavaSc
 
 Enum in TypeScript
 An enum is a way to define a set of named constants. Enums allow you to define a collection of related values that can be accessed using a set of named keys.
-```
+```typescript
     enum Fruit {
         Apple, //0
         Banana, //1
@@ -179,7 +179,7 @@ An enum is a way to define a set of named constants. Enums allow you to define a
     console.log(Fruit.Orange); // Output: 2
 ```
 
-```
+```typescript
     enum FruitColor {
       Apple  = 1, 
       Banana = 2,
@@ -189,6 +189,3 @@ An enum is a way to define a set of named constants. Enums allow you to define a
     console.log(Fruit[1]); // Output: "Banana"
     console.log(Fruit[2]); // Output: "Orange"
 ```
-
-
-

@@ -1,0 +1,1 @@
+To stop using nay in typescript, enable __noImplicitAny__ in tsconfig.json
